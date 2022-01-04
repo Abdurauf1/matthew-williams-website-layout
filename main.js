@@ -1,3 +1,7 @@
+var active = document.querySelector(".active")
+
+
+
 function filter(category) {
     const projects = document.getElementsByClassName("projects-card")
     for (let l = 0; l < projects.length; l++) {

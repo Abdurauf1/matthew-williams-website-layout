@@ -4,6 +4,7 @@ $main-title-color: #404144;
 $main-text-color: #717171;
 
 * {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
     outline: none;
@@ -45,6 +46,11 @@ body {
     display: none;
 }
 
+.active {
+    color: $main-purple-color!important;
+}
+
+//header
 .bg-image {
     width: 100vw;
     height: 100vh;
@@ -52,62 +58,60 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    .container {
-        .header {
-            width: fit-content;
-            margin: auto;
-            padding-top: 220px;
-            text-align: center;
-            .about-me {
-                font-size: 49px;
-                color: #fff;
-                font-family: name-font;
-                .my-name {
-                    color: $main-purple-color;
-                    font-weight: bold;
-                }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .header {
+        width: fit-content;
+        text-align: center;
+        user-select: none;
+        .about-me {
+            font-size: 43px;
+            color: #fff;
+            pointer-events: none;
+            font-family: name-font;
+            .my-name {
+                color: $main-purple-color;
+                font-weight: bold;
             }
-            .who-am-i {
-                font-size: 50px;
-                color: #fff;
-                padding-bottom: 20px;
-                font-family: name-font;
-            }
-            .header-button {
-                width: 200px;
-                height: 50px;
-                color: #fff;
-                font-family: name-font;
-                background-color: transparent;
-                border: 1px solid #fff;
-                font-size: 20px;
-                margin-right: 5px;
+        }
+        .who-am-i {
+            font-size: 43px;
+            color: #fff;
+            padding-bottom: 25px;
+            font-family: name-font;
+            pointer-events: none;
+        }
+        .header-button {
+            padding: 12px 20px;
+            color: #fff;
+            font-family: name-font;
+            background-color: transparent;
+            border: 2px solid #fff;
+            font-size: 20px;    
+            transition-duration: 0.5s;
+            cursor: pointer;
+            text-decoration: none;
+            &:hover {
+                background-color: $main-color;
+                border: 2px solid $main-color;
                 transition-duration: 0.5s;
-                cursor: pointer;
-                &:hover {
-                    background-color: $main-color;
-                    border: 1px solid $main-color;
-                    transition-duration: 0.5s;
-                }
-                &:hover {
-                    .right-icon {
-                        transform: rotate(90deg);
-                    }
-                }
-                .btn-href {
-                    text-decoration: none;
-                    color: #fff;
-                    margin-right: 7px;
-                }
+            }
+            &:hover {
                 .right-icon {
-                    font-size: 16px;
-                    transition-duration: 0.5s;
+                    transform: rotate(90deg);
                 }
+            }
+            .right-icon {
+                font-size: 16px;
+                transition-duration: 0.5s;
+                margin-left: 13px;
             }
         }
     }
 }
 
+//navigation bar
 .nav {
     width: 100vw;
     height: 50px;
@@ -122,7 +126,10 @@ body {
             width: 500px;
             display: flex;
             .nav-item {
+                list-style-type: none;
                 .nav-text {
+                    text-decoration: none;
+                    color: #fff;
                     margin: 10px 20px;
                     text-transform: uppercase;
                     font-family: raleway;
@@ -681,7 +688,7 @@ body {
             }
         }
     }
-}       
+}
 
 .footer {
     width: 100vw;
