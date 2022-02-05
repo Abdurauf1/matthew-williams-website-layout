@@ -46,10 +46,6 @@ body {
     display: none;
 }
 
-.active {
-    color: $main-purple-color !important;
-}
-
 //header
 .bg-image {
     width: 100vw;
@@ -112,6 +108,11 @@ body {
 }
 
 //navigation bar
+
+.active-nav {
+    color: $main-purple-color !important;
+}
+
 .nav {
     width: 100vw;
     height: 50px;
